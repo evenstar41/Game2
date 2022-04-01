@@ -1,0 +1,10 @@
+C:\Users\ferdi\source\repos\NesneLabDeneme1\NesneLabDeneme1\bin\Debug\NesneLabDeneme1.exe.config
+C:\Users\ferdi\source\repos\NesneLabDeneme1\NesneLabDeneme1\bin\Debug\NesneLabDeneme1.exe
+C:\Users\ferdi\source\repos\NesneLabDeneme1\NesneLabDeneme1\bin\Debug\NesneLabDeneme1.pdb
+C:\Users\ferdi\source\repos\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.csprojAssemblyReference.cache
+C:\Users\ferdi\source\repos\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form1.resources
+C:\Users\ferdi\source\repos\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Properties.Resources.resources
+C:\Users\ferdi\source\repos\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.csproj.GenerateResource.cache
+C:\Users\ferdi\source\repos\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.csproj.CoreCompileInputs.cache
+C:\Users\ferdi\source\repos\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.exe
+C:\Users\ferdi\source\repos\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.pdb
