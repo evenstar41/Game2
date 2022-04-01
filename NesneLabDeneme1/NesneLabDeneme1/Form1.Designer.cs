@@ -38,27 +38,27 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(304, 228);
+            this.button1.Location = new System.Drawing.Point(304, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Log in";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(427, 227);
+            this.button2.Location = new System.Drawing.Point(304, 267);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(304, 142);
+            this.txtusername.Location = new System.Drawing.Point(304, 147);
             this.txtusername.Multiline = true;
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(100, 20);
@@ -66,7 +66,7 @@
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(304, 179);
+            this.txtpassword.Location = new System.Drawing.Point(304, 184);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(100, 20);
@@ -75,18 +75,20 @@
             // lblusername
             // 
             this.lblusername.AutoSize = true;
+            this.lblusername.Font = new System.Drawing.Font("Pristina", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblusername.Location = new System.Drawing.Point(210, 142);
             this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(55, 13);
+            this.lblusername.Size = new System.Drawing.Size(84, 29);
             this.lblusername.TabIndex = 4;
             this.lblusername.Text = "Username";
             // 
             // lblpassword
             // 
             this.lblpassword.AutoSize = true;
+            this.lblpassword.Font = new System.Drawing.Font("Pristina", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpassword.Location = new System.Drawing.Point(210, 179);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(53, 13);
+            this.lblpassword.Size = new System.Drawing.Size(75, 29);
             this.lblpassword.TabIndex = 5;
             this.lblpassword.Text = "Password";
             // 
@@ -103,6 +105,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
