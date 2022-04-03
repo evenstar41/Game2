@@ -15,6 +15,7 @@ namespace NesneLabDeneme1
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -28,11 +29,32 @@ namespace NesneLabDeneme1
             {
                 new Form2().Show();
             }
+            if (txtusername.Text == "user" && txtpassword.Text == "user")
+            {
+                new Form2().Show();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtusername.Text == "admin" && txtpassword.Text == "admin")
+            {
+                new Form2().Show();
+            }
+            if (txtusername.Text == "user" && txtpassword.Text == "user")
+            {
+                new Form2().Show();
+            }
         }
     }
 }
