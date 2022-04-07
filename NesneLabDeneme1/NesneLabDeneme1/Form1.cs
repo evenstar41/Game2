@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Xml;
 
 namespace NesneLabDeneme1
 {
@@ -26,51 +27,36 @@ namespace NesneLabDeneme1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtusername.Text=="admin" &&  txtpassword.Text=="admin" )
+            if(txtusername.Text=="admin" && txtpassword.Text == "admin")
             {
-                new Form2().Show();
-                FileStream fw;
-                StreamWriter sw;
-                fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                Form4 f4 = new Form4();
+                this.Hide();
+                f4.Show();
+            }
+            else
+            {
+                XmlDocument xmldoc = new XmlDocument();
+                xmldoc.Load("kayıtlar.xml");
 
-                sw = new StreamWriter(fw);
-
-                sw.WriteLine(txtusername.Text);
-                fw.Close();
+                foreach (XmlNode node in xmldoc.DocumentElement)
+                {
+                    if (node["username"].InnerText == txtusername.Text && node["password"].InnerText == txtpassword.Text)
+                    {
+                        Form2 f2 = new Form2();
+                        f2.Show();
+                        this.Hide();
+                    }
+                }
 
             }
-            if (txtusername.Text == "user" && txtpassword.Text == "user")
-            {
-                new Form2().Show();
-                FileStream fw;
-                StreamWriter sw;
-                fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
 
-                sw = new StreamWriter(fw);
-
-                sw.WriteLine(txtusername.Text);
-                fw.Close();
-
-            }
+            
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            StreamReader sr = File.OpenText("username.txt");
-            string username;
-            while ((username = sr.ReadLine()) != null)
-            {
-                if (username == "admin")
-                {
-                    txtusername.Text = "admin";
-                }
-                else if (username == "user")
-                {
-                    txtusername.Text = "user";
-                }
-            }
-            sr.Close();
+            
         }
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
@@ -80,31 +66,7 @@ namespace NesneLabDeneme1
 
         private void button1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtusername.Text == "admin" && txtpassword.Text == "admin")
-            {
-                new Form2().Show();
-                FileStream fw;
-                StreamWriter sw;
-                fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
-
-                sw = new StreamWriter(fw);
-
-                sw.WriteLine(txtusername.Text);
-                fw.Close();
-
-            }
-            if (txtusername.Text == "user" && txtpassword.Text == "user")
-            {
-                new Form2().Show();
-                FileStream fw;
-                StreamWriter sw;
-                fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
-
-                sw = new StreamWriter(fw);
-
-                sw.WriteLine(txtusername.Text);
-                fw.Close();
-            }
+            
         }
 
         private void txtusername_TextChanged(object sender, EventArgs e)
@@ -131,6 +93,13 @@ namespace NesneLabDeneme1
             {
                 txtpassword.UseSystemPasswordChar = true;
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            this.Hide();
+            f3.Show();
         }
     }
 }
