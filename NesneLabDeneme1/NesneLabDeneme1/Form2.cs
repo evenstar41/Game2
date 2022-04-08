@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace NesneLabDeneme1
 {
@@ -67,6 +69,18 @@ namespace NesneLabDeneme1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            //admin sayfası girişi izni
+            FileStream fs = new FileStream("username.txt", FileMode.Open, FileAccess.Read);
+            StreamReader sw = new StreamReader(fs);
+            string yazi = sw.ReadLine();
+
+            sw.Close();
+            fs.Close();
+            if (yazi == "admin")
+            {
+                admingirisi.Visible = true;
+            }
+
             StreamReader sr = File.OpenText("nesnelabbb.txt");
             string metin;
 
@@ -111,8 +125,7 @@ namespace NesneLabDeneme1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 form1 = new Form1();
-            form1.Show();
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -123,6 +136,12 @@ namespace NesneLabDeneme1
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void admingirisi_Click(object sender, EventArgs e)
+        {
+            new Form4().Show();
+            
         }
     }
 }

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uyeler>
+  <uye>
+    <name-surname>admin</name-surname>
+    <username>admin</username>
+    <password>admin</password>
+    <phone></phone>
+    <city></city>
+    <adress></adress>
+    <e-mail></e-mail>
+    <country></country>
+  </uye>
+  <uye>
+    <name-surname>berke</name-surname>
+    <username>berke</username>
+    <password>berke</password>
+    <phone></phone>
+    <city></city>
+    <adress></adress>
+    <e-mail></e-mail>
+    <country></country>
+  </uye>
+</uyeler>

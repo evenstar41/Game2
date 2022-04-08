@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace NesneLabDeneme1
 {
     public partial class Form1 : Form
     {
+        public string FromXML_user = "";
+        public string FromXML_password = "";
+
         public Form1()
         {
             InitializeComponent();
@@ -26,51 +31,115 @@ namespace NesneLabDeneme1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtusername.Text=="admin" &&  txtpassword.Text=="admin" )
+            string user = txtusername.Text;
+            string pws = txtpassword.Text;
+
+            //XDocument doc = XDocument.Load(Application.StartupPath.ToString() + @"\kayıtlar.xml");
+            //var selected_user = from x in doc.Descendants("uyeler").Where
+            //                    (x => (string)x.Element("uye") == txtusername.Text)
+            //                    select new
+            //                    {
+            //                        XMLuser = x.Element("username").Value,
+            //                        XMLpassword = x.Element("password").Value,
+            //                        XMLphone = x.Element("phone").Value,
+            //                        XMLcity = x.Element("city").Value,
+            //                        XMLadress = x.Element("adress").Value,
+            //                        XMLmail = x.Element("e-mail").Value,
+            //                        XMLname = x.Element("name-surname").Value,
+            //                    };
+            //foreach (var x in selected_user)
+            //{
+            //    FromXML_user = x.XMLuser;
+            //    FromXML_password = x.XMLpassword;
+            //}
+            XmlDocument xmldoc = new XmlDocument();
+                xmldoc.Load("kayıtlar.xml");
+
+            foreach (XmlNode node in xmldoc.DocumentElement)
             {
-                new Form2().Show();
-                FileStream fw;
-                StreamWriter sw;
-                fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                if (node["username"].InnerText == user)
+                {
+                    if (node["password"].InnerText == pws)
+                    {
+                        FileStream fw;
+                        StreamWriter sw;
+                        fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
 
-                sw = new StreamWriter(fw);
+                        sw = new StreamWriter(fw);
+                        sw.WriteLine(txtusername.Text);
+                        sw.Close();
+                        fw.Close();
+                        txtpassword.Clear();
+                        new Form2().Show();
+                    }
+                    else
+                    {
+                        lbluyarı.Text = "Wrong password!";
+                        txtpassword.Clear();
+                    }
+                }
+            }   
+                
 
-                sw.WriteLine(txtusername.Text);
-                fw.Close();
 
-            }
-            if (txtusername.Text == "user" && txtpassword.Text == "user")
-            {
-                new Form2().Show();
-                FileStream fw;
-                StreamWriter sw;
-                fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            //if (user == FromXML_user)
+            //{
+            //    if (pws == FromXML_password)
+            //    {
+            //        FileStream fw;
+            //        StreamWriter sw;
+            //        fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
 
-                sw = new StreamWriter(fw);
+            //        sw = new StreamWriter(fw);
+            //        sw.WriteLine(txtusername.Text);
+            //        sw.Close();
+            //        fw.Close();
 
-                sw.WriteLine(txtusername.Text);
-                fw.Close();
+            //        new Form2().Show();
+                    
+            //    }
+            //    else
+            //    {
+            //        lbluyarı.Text = "Wrong password!";
+            //        txtpassword.Clear();
+            //    }
+            //}
+            //if(txtusername.Text=="admin" && txtpassword.Text == "admin")
+            //{
+            //    Form4 f4 = new Form4();
+            //    this.Hide();
+            //    f4.Show();
+            //}
+            //else
+            //{
+            //    XmlDocument xmldoc = new XmlDocument();
+            //    xmldoc.Load("kayıtlar.xml");
 
-            }
+            //    foreach (XmlNode node in xmldoc.DocumentElement)
+            //    {
+            //        if (node["username"].InnerText == txtusername.Text && node["password"].InnerText == txtpassword.Text)
+            //        {
+            //            Form2 f2 = new Form2();
+            //            f2.Show();
+            //            this.Hide();
+            //        }
+            //    }
+
+            //}
+
+
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            StreamReader sr = File.OpenText("username.txt");
-            string username;
-            while ((username = sr.ReadLine()) != null)
-            {
-                if (username == "admin")
-                {
-                    txtusername.Text = "admin";
-                }
-                else if (username == "user")
-                {
-                    txtusername.Text = "user";
-                }
-            }
-            sr.Close();
+            FileStream fs = new FileStream("username.txt", FileMode.Open, FileAccess.Read);
+            StreamReader sw = new StreamReader(fs);
+            string yazi = sw.ReadLine();
+
+            sw.Close();
+            fs.Close();
+            txtusername.Text = yazi;
         }
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
@@ -80,31 +149,7 @@ namespace NesneLabDeneme1
 
         private void button1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtusername.Text == "admin" && txtpassword.Text == "admin")
-            {
-                new Form2().Show();
-                FileStream fw;
-                StreamWriter sw;
-                fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
-
-                sw = new StreamWriter(fw);
-
-                sw.WriteLine(txtusername.Text);
-                fw.Close();
-
-            }
-            if (txtusername.Text == "user" && txtpassword.Text == "user")
-            {
-                new Form2().Show();
-                FileStream fw;
-                StreamWriter sw;
-                fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
-
-                sw = new StreamWriter(fw);
-
-                sw.WriteLine(txtusername.Text);
-                fw.Close();
-            }
+            button1_Click(sender, e);
         }
 
         private void txtusername_TextChanged(object sender, EventArgs e)
@@ -131,6 +176,13 @@ namespace NesneLabDeneme1
             {
                 txtpassword.UseSystemPasswordChar = true;
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            
+            f3.Show();
         }
     }
 }
