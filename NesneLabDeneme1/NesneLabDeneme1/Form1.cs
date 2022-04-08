@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml;
 using System.Xml.Linq;
+using System.Security.Cryptography;
 
 namespace NesneLabDeneme1
 {
@@ -59,7 +60,11 @@ namespace NesneLabDeneme1
             {
                 if (node["username"].InnerText == user)
                 {
-                    if (node["password"].InnerText == pws)
+                    SHA256Managed sha256 = new SHA256Managed();
+                    byte[] bitDizisi = System.Text.Encoding.UTF8.GetBytes(pws);
+
+                    string sifreliVeri = Convert.ToBase64String(sha256.ComputeHash(bitDizisi));
+                    if (node["password"].InnerText == sifreliVeri)
                     {
                         FileStream fw;
                         StreamWriter sw;
