@@ -1,6 +1,7 @@
 easy
-Triangle
-Square
 Circle
+Red
+Green
+rcle
 Red
 Green
