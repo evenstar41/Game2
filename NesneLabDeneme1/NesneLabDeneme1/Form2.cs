@@ -78,6 +78,8 @@ namespace NesneLabDeneme1
             fs.Close();
             try
             {
+
+
                 if (yazi == "admin")
                 {
                     admingirisi.Visible = true;
@@ -122,7 +124,6 @@ namespace NesneLabDeneme1
                     }
                 }
                 sr.Close();
-
             }
             catch (Exception)
             {
@@ -150,6 +151,12 @@ namespace NesneLabDeneme1
         {
             new Form4().Show();
             
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            new Form5().Show();
+            this.Hide();
         }
     }
 }

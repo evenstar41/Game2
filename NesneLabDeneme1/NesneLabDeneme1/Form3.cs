@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using System.Security.Cryptography;
 
 namespace NesneLabDeneme1
 {
@@ -21,7 +22,6 @@ namespace NesneLabDeneme1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             XDocument xdosya = XDocument.Load("kayıtlar.xml");
             XElement rootelement = xdosya.Root;
 
@@ -29,7 +29,14 @@ namespace NesneLabDeneme1
 
             XElement name_surname = new XElement("name-surname", textBox8.Text);
             XElement username = new XElement("username", textBox1.Text);
-            XElement password = new XElement("password", textBox2.Text);
+            ///////////////
+
+            SHA256Managed sha256 = new SHA256Managed();
+            byte[] bitDizisi = System.Text.Encoding.UTF8.GetBytes(textBox2.Text);
+
+            string sifreliVeri = Convert.ToBase64String(sha256.ComputeHash(bitDizisi));
+            ///////
+            XElement password = new XElement("password", sifreliVeri);
             XElement phone = new XElement("phone", textBox3.Text);
             XElement city = new XElement("city", textBox4.Text);
             XElement adress = new XElement("adress", textBox5.Text);
