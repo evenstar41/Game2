@@ -4,20 +4,20 @@
     <name-surname>admin</name-surname>
     <username>admin</username>
     <password>admin</password>
-    <phone></phone>
-    <city></city>
-    <adress></adress>
-    <e-mail></e-mail>
-    <country></country>
+    <phone>admin</phone>
+    <city>admin</city>
+    <adress>admin</adress>
+    <e-mail>admin</e-mail>
+    <country>admin</country>
   </uye>
   <uye>
-    <name-surname>berke</name-surname>
-    <username>berke</username>
-    <password>berke</password>
-    <phone></phone>
-    <city></city>
-    <adress></adress>
-    <e-mail></e-mail>
-    <country></country>
+    <name-surname>Berke Kaçar</name-surname>
+    <username>kacar</username>
+    <password>123456789</password>
+    <phone>5555555555</phone>
+    <city>eskişehir</city>
+    <adress>büyükdere</adress>
+    <e-mail>kacar@kacar.com</e-mail>
+    <country>turkey</country>
   </uye>
 </uyeler>

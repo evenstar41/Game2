@@ -76,50 +76,58 @@ namespace NesneLabDeneme1
 
             sw.Close();
             fs.Close();
-            if (yazi == "admin")
+            try
             {
-                admingirisi.Visible = true;
+                if (yazi == "admin")
+                {
+                    admingirisi.Visible = true;
+                }
+
+                StreamReader sr = File.OpenText("nesnelabbb.txt");
+                string metin;
+
+
+                while ((metin = sr.ReadLine()) != null)
+                {
+                    comboBox1.Text = metin;
+                    break;
+                }
+                string metin2;
+
+                while ((metin2 = sr.ReadLine()) != null)
+                {
+                    if (metin2 == "Circle")
+                    {
+                        checkBox1.Checked = true;
+                    }
+                    if (metin2 == "Triangle")
+                    {
+                        checkBox3.Checked = true;
+                    }
+                    if (metin2 == "Square")
+                    {
+                        checkBox2.Checked = true;
+                    }
+                    if (metin2 == "Red")
+                    {
+                        chkboxRed.Checked = true;
+                    }
+                    if (metin2 == "Yellow")
+                    {
+                        chkboxYellow.Checked = true;
+                    }
+                    if (metin2 == "Green")
+                    {
+                        chkboxGreen.Checked = true;
+                    }
+                }
+                sr.Close();
+
             }
-
-            StreamReader sr = File.OpenText("nesnelabbb.txt");
-            string metin;
-
-
-            while ((metin = sr.ReadLine()) != null)
+            catch (Exception)
             {
-                comboBox1.Text = metin;
-                break;
-            }
-            string metin2;
 
-            while ((metin2 = sr.ReadLine()) != null)
-            {
-                if (metin2 == "Circle")
-                {
-                    checkBox1.Checked = true;
-                }
-                if (metin2 == "Triangle")
-                {
-                    checkBox3.Checked = true;
-                }
-                if (metin2 == "Square")
-                {
-                    checkBox2.Checked = true;
-                }
-                if (metin2 == "Red")
-                {
-                    chkboxRed.Checked = true;
-                }
-                if (metin2 == "Yellow")
-                {
-                    chkboxYellow.Checked = true;
-                }
-                if (metin2 == "Green")
-                {
-                    chkboxGreen.Checked = true;
-                }
             }
-            sr.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
