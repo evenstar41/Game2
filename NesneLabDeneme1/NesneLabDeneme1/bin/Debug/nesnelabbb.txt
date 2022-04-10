@@ -1,6 +1,0 @@
-easy
-Triangle
-Square
-Circle
-Red
-Green

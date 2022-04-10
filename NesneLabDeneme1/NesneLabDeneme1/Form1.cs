@@ -78,6 +78,11 @@ namespace NesneLabDeneme1
                         txtpassword.Clear();
                     }
                 }
+                else
+                {
+                    lbluyarı.Text = "Wrong password!";
+                    txtpassword.Clear();
+                }
             }   
                 
 
@@ -133,13 +138,52 @@ namespace NesneLabDeneme1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            FileStream fs = new FileStream("username.txt", FileMode.Open, FileAccess.Read);
-            StreamReader sw = new StreamReader(fs);
-            string yazi = sw.ReadLine();
+            try
+            {
+                FileStream fs = new FileStream("username.txt",FileMode.OpenOrCreate);
+                StreamReader sw = new StreamReader(fs);
+                string yazi = sw.ReadLine();
 
-            sw.Close();
-            fs.Close();
-            txtusername.Text = yazi;
+                sw.Close();
+                fs.Close();
+                txtusername.Text = yazi;
+            }
+            catch(Exception)
+            {
+                
+            }
+            try
+            {
+                XDocument xdosya1 = XDocument.Load("kayıtlar.xml");
+            }
+            catch (Exception)
+            {
+                XmlTextWriter dosya = new XmlTextWriter("kayıtlar.xml", Encoding.UTF8);
+                dosya.Formatting = Formatting.Indented;
+                dosya.WriteStartElement("uyeler");
+
+                dosya.WriteEndElement();
+
+                dosya.Close();
+
+                XDocument xdosya1 = XDocument.Load("kayıtlar.xml");
+                XElement rootelement1 = xdosya1.Root;
+
+                XElement element1 = new XElement("uye");
+
+                XElement name_surname1 = new XElement("name-surname", "admin");
+                XElement username1 = new XElement("username", "admin");
+                XElement password1 = new XElement("password", "admin");
+                XElement phone1 = new XElement("phone", "admin");
+                XElement city1 = new XElement("city", "admin");
+                XElement adress1 = new XElement("adress", "admin");
+                XElement e_mail1 = new XElement("e-mail", "admin");
+                XElement country1 = new XElement("country", "admin");
+                element1.Add(name_surname1, username1, password1, phone1, city1, adress1, e_mail1, country1);
+                rootelement1.Add(element1);
+
+                xdosya1.Save("kayıtlar.xml");
+            }
         }
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
@@ -181,6 +225,7 @@ namespace NesneLabDeneme1
         private void button2_Click_1(object sender, EventArgs e)
         {
             Form3 f3 = new Form3();
+            this.Close();
             
             f3.Show();
         }

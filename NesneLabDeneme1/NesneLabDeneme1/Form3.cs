@@ -21,6 +21,7 @@ namespace NesneLabDeneme1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             XDocument xdosya = XDocument.Load("kayıtlar.xml");
             XElement rootelement = xdosya.Root;
 
