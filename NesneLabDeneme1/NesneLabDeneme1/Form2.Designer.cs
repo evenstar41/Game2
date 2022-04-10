@@ -42,6 +42,7 @@
             this.chkboxRed = new System.Windows.Forms.CheckBox();
             this.lblColor = new System.Windows.Forms.Label();
             this.admingirisi = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +75,7 @@
             "normal",
             "hard"});
             this.comboBox1.Location = new System.Drawing.Point(3, 68);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 2;
@@ -96,7 +97,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(3, 126);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(64, 17);
             this.checkBox1.TabIndex = 4;
@@ -107,7 +108,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(3, 147);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(60, 17);
             this.checkBox2.TabIndex = 5;
@@ -118,7 +119,7 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(3, 168);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(52, 17);
             this.checkBox3.TabIndex = 6;
@@ -128,7 +129,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1, 222);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(59, 19);
             this.button1.TabIndex = 7;
@@ -139,7 +140,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(61, 222);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(58, 19);
             this.button2.TabIndex = 8;
@@ -151,7 +152,7 @@
             // 
             this.chkboxGreen.AutoSize = true;
             this.chkboxGreen.Location = new System.Drawing.Point(67, 168);
-            this.chkboxGreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkboxGreen.Margin = new System.Windows.Forms.Padding(2);
             this.chkboxGreen.Name = "chkboxGreen";
             this.chkboxGreen.Size = new System.Drawing.Size(55, 17);
             this.chkboxGreen.TabIndex = 12;
@@ -162,7 +163,7 @@
             // 
             this.chkboxYellow.AutoSize = true;
             this.chkboxYellow.Location = new System.Drawing.Point(67, 147);
-            this.chkboxYellow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkboxYellow.Margin = new System.Windows.Forms.Padding(2);
             this.chkboxYellow.Name = "chkboxYellow";
             this.chkboxYellow.Size = new System.Drawing.Size(57, 17);
             this.chkboxYellow.TabIndex = 11;
@@ -173,7 +174,7 @@
             // 
             this.chkboxRed.AutoSize = true;
             this.chkboxRed.Location = new System.Drawing.Point(67, 126);
-            this.chkboxRed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkboxRed.Margin = new System.Windows.Forms.Padding(2);
             this.chkboxRed.Name = "chkboxRed";
             this.chkboxRed.Size = new System.Drawing.Size(46, 17);
             this.chkboxRed.TabIndex = 10;
@@ -202,11 +203,22 @@
             this.admingirisi.Visible = false;
             this.admingirisi.Click += new System.EventHandler(this.admingirisi_Click);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(465, 13);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(120, 23);
+            this.btnEdit.TabIndex = 16;
+            this.btnEdit.Text = "Edit Profile";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.admingirisi);
             this.Controls.Add(this.chkboxGreen);
             this.Controls.Add(this.chkboxYellow);
@@ -221,10 +233,9 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -247,5 +258,6 @@
         private System.Windows.Forms.CheckBox chkboxRed;
         private System.Windows.Forms.Label lblColor;
         private System.Windows.Forms.Button admingirisi;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

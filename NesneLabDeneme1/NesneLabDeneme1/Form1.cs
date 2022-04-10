@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml;
 using System.Xml.Linq;
+using System.Security.Cryptography;
 
 namespace NesneLabDeneme1
 {
@@ -34,24 +35,7 @@ namespace NesneLabDeneme1
             string user = txtusername.Text;
             string pws = txtpassword.Text;
 
-            //XDocument doc = XDocument.Load(Application.StartupPath.ToString() + @"\kayıtlar.xml");
-            //var selected_user = from x in doc.Descendants("uyeler").Where
-            //                    (x => (string)x.Element("uye") == txtusername.Text)
-            //                    select new
-            //                    {
-            //                        XMLuser = x.Element("username").Value,
-            //                        XMLpassword = x.Element("password").Value,
-            //                        XMLphone = x.Element("phone").Value,
-            //                        XMLcity = x.Element("city").Value,
-            //                        XMLadress = x.Element("adress").Value,
-            //                        XMLmail = x.Element("e-mail").Value,
-            //                        XMLname = x.Element("name-surname").Value,
-            //                    };
-            //foreach (var x in selected_user)
-            //{
-            //    FromXML_user = x.XMLuser;
-            //    FromXML_password = x.XMLpassword;
-            //}
+            
             XmlDocument xmldoc = new XmlDocument();
                 xmldoc.Load("kayıtlar.xml");
 
@@ -59,7 +43,12 @@ namespace NesneLabDeneme1
             {
                 if (node["username"].InnerText == user)
                 {
-                    if (node["password"].InnerText == pws)
+                    SHA256Managed sha256 = new SHA256Managed();
+                    byte[] bitDizisi = System.Text.Encoding.UTF8.GetBytes(pws);
+
+                    string sifreliVeri = Convert.ToBase64String(sha256.ComputeHash(bitDizisi));
+
+                    if (node["password"].InnerText == sifreliVeri)
                     {
                         FileStream fw;
                         StreamWriter sw;
@@ -67,10 +56,12 @@ namespace NesneLabDeneme1
 
                         sw = new StreamWriter(fw);
                         sw.WriteLine(txtusername.Text);
+                        sw.WriteLine(txtpassword.Text);
                         sw.Close();
                         fw.Close();
                         txtpassword.Clear();
                         new Form2().Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -78,59 +69,11 @@ namespace NesneLabDeneme1
                         txtpassword.Clear();
                     }
                 }
-                else
-                {
-                    lbluyarı.Text = "Wrong password!";
-                    txtpassword.Clear();
-                }
             }   
                 
 
 
-            //if (user == FromXML_user)
-            //{
-            //    if (pws == FromXML_password)
-            //    {
-            //        FileStream fw;
-            //        StreamWriter sw;
-            //        fw = new FileStream("username.txt", FileMode.OpenOrCreate, FileAccess.Write);
-
-            //        sw = new StreamWriter(fw);
-            //        sw.WriteLine(txtusername.Text);
-            //        sw.Close();
-            //        fw.Close();
-
-            //        new Form2().Show();
-                    
-            //    }
-            //    else
-            //    {
-            //        lbluyarı.Text = "Wrong password!";
-            //        txtpassword.Clear();
-            //    }
-            //}
-            //if(txtusername.Text=="admin" && txtpassword.Text == "admin")
-            //{
-            //    Form4 f4 = new Form4();
-            //    this.Hide();
-            //    f4.Show();
-            //}
-            //else
-            //{
-            //    XmlDocument xmldoc = new XmlDocument();
-            //    xmldoc.Load("kayıtlar.xml");
-
-            //    foreach (XmlNode node in xmldoc.DocumentElement)
-            //    {
-            //        if (node["username"].InnerText == txtusername.Text && node["password"].InnerText == txtpassword.Text)
-            //        {
-            //            Form2 f2 = new Form2();
-            //            f2.Show();
-            //            this.Hide();
-            //        }
-            //    }
-
-            //}
+            
 
 
 
@@ -140,7 +83,7 @@ namespace NesneLabDeneme1
         {
             try
             {
-                FileStream fs = new FileStream("username.txt",FileMode.OpenOrCreate);
+                FileStream fs = new FileStream("username.txt", FileMode.OpenOrCreate);
                 StreamReader sw = new StreamReader(fs);
                 string yazi = sw.ReadLine();
 
@@ -148,9 +91,9 @@ namespace NesneLabDeneme1
                 fs.Close();
                 txtusername.Text = yazi;
             }
-            catch(Exception)
+            catch (Exception)
             {
-                
+
             }
             try
             {
@@ -225,7 +168,6 @@ namespace NesneLabDeneme1
         private void button2_Click_1(object sender, EventArgs e)
         {
             Form3 f3 = new Form3();
-            this.Close();
             
             f3.Show();
         }

@@ -58,15 +58,15 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(22, 22);
+            this.label1.Location = new System.Drawing.Point(25, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 16;
-            this.label1.Text = "Username or name";
+            this.label1.Text = "Admin Page";
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(84, 423);
+            this.btnUpdate.Location = new System.Drawing.Point(84, 393);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 26);
             this.btnUpdate.TabIndex = 15;
@@ -83,7 +83,7 @@
             // 
             // btnBan
             // 
-            this.btnBan.Location = new System.Drawing.Point(84, 392);
+            this.btnBan.Location = new System.Drawing.Point(84, 425);
             this.btnBan.Name = "btnBan";
             this.btnBan.Size = new System.Drawing.Size(75, 26);
             this.btnBan.TabIndex = 13;
@@ -103,7 +103,8 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(249, 12);
             this.dataGridView1.Name = "dataGridView1";

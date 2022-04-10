@@ -54,7 +54,7 @@ namespace NesneLabDeneme1
             if (node != null)
             {
                 node.SetElementValue("name-surname", txtUser.Text);
-                node.SetElementValue("password", txtPwd.Text);
+                //node.SetElementValue("password", txtPwd.Text);
                 node.SetElementValue("phone", txtPhone.Text);
                 node.SetElementValue("city", txtCity.Text);
                 node.SetElementValue("country", txtCountry.Text);
