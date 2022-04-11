@@ -158,5 +158,12 @@ namespace NesneLabDeneme1
             new Form5().Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form6 f6 = new Form6();
+            this.Enabled = false;
+            f6.Show();
+        }
     }
 }
