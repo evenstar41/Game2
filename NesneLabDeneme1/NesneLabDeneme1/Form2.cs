@@ -11,10 +11,13 @@ using System.IO;
 using System.Xml;
 using System.Xml.Linq;
 
+
 namespace NesneLabDeneme1
 {
+    
     public partial class Form2 : Form
     {
+        
         public Form2()
         {
             InitializeComponent();
@@ -142,9 +145,30 @@ namespace NesneLabDeneme1
 
         }
 
+        public static int satir;
+        public static int sutun;
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
+            if (comboBox1.SelectedItem == "easy")
+            {
+                lblBoyut.Text = "15x15";
+                satir=15; 
+                sutun = 15;
+            }
+            if (comboBox1.SelectedItem == "medium")
+            {
+                lblBoyut.Text = "9x9";
+                satir = 9;
+                sutun = 9;
+            }
+            if (comboBox1.SelectedItem == "hard")
+            {
+                satir = 5;
+                sutun = 5;
+                lblBoyut.Text = "5x5";
+            }
         }
 
         private void admingirisi_Click(object sender, EventArgs e)
@@ -155,8 +179,40 @@ namespace NesneLabDeneme1
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            new Form5().Show();
             this.Hide();
+            new Form5().ShowDialog();
+            
+        }
+
+        private void chkCustom_CheckedChanged(object sender, EventArgs e)
+        {
+        //////Aynı anda iki oyun modu açılmaması için yapılmıştır.
+        if (chkCustom.Checked)
+        {
+                
+               comboBox1.Enabled = false;
+               panel1.Enabled = true;
+
+                    
+        }
+        else
+        {
+               comboBox1.Enabled = true;
+               panel1.Enabled = false;
+        }
+            
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+
+            new Form6().ShowDialog();
         }
     }
 }
