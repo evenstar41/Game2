@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uyeler>
+  <uye>
+    <name-surname>admin</name-surname>
+    <username>admin</username>
+    <password>jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=</password>
+    <phone>admin</phone>
+    <city>İzmit</city>
+    <adress>admin</adress>
+    <e-mail>admin</e-mail>
+    <country>admin</country>
+  </uye>
+  <uye>
+    <name-surname>Berke</name-surname>
+    <username>kacar</username>
+    <password>RUB1qHRXZ3n2EnlI/QVPdJsF4IUZA5FRIceZJSs9TEw=</password>
+    <phone>s</phone>
+    <city>s</city>
+    <adress>s</adress>
+    <e-mail>ss</e-mail>
+    <country>d</country>
+  </uye>
+  <uye>
+    <name-surname>Ömer Faruk</name-surname>
+    <username>Bingöl</username>
+    <password>WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=</password>
+    <phone>05378731989</phone>
+    <city>Kocaeli</city>
+    <adress>Bayrampaşa</adress>
+    <e-mail>roqer59@hotmail.com</e-mail>
+    <country>Almanya</country>
+  </uye>
+  <uye>
+    <name-surname>Ferdi Yılmaz</name-surname>
+    <username>legolas</username>
+    <password>WpoZ5e/eA3QZwBe98JXqVHEjdsT3UL5miET0HgKXHK8=</password>
+    <phone>32423423</phone>
+    <city>izmit</city>
+    <adress>alikahya</adress>
+    <e-mail>ferdi@gmail.com</e-mail>
+    <country>türkiye</country>
+  </uye>
+</uyeler>

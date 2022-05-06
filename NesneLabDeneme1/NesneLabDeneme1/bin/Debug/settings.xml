@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uyeler>
+  <uye>
+    <name-surname>admin</name-surname>
+    <username>admin</username>
+    <password>jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=</password>
+    <phone>admin</phone>
+    <city>İzmit</city>
+    <adress>admin</adress>
+    <e-mail>admin</e-mail>
+    <country>admin</country>
+  </uye>
+  <uye>    
+    <username>kacar</username>    
+  </uye>
+  <uye>    
+    <username>Bingöl</username>
+  </uye>
+</uyeler>
