@@ -37,7 +37,7 @@ namespace NesneLabDeneme1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            new Form3().Show();
+            new Form3().ShowDialog();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -96,6 +96,11 @@ namespace NesneLabDeneme1
                     MessageBox.Show("Could'nt find the user!");
                 }
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
