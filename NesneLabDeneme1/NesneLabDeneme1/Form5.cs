@@ -69,9 +69,8 @@ namespace NesneLabDeneme1
 
         private void Back_Click(object sender, EventArgs e)
         {
-            //new Form2().Show();
-            this.Close();
             new Form2().Show();
+            this.Hide();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

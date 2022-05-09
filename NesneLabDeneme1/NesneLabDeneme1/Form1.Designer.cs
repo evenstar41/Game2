@@ -41,9 +41,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(334, 227);
+            this.button1.Location = new System.Drawing.Point(445, 279);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Log in";
             this.button1.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(334, 306);
+            this.btnClose.Location = new System.Drawing.Point(445, 377);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(100, 28);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -62,10 +64,11 @@
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(320, 155);
+            this.txtusername.Location = new System.Drawing.Point(427, 191);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtusername.Multiline = true;
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(100, 20);
+            this.txtusername.Size = new System.Drawing.Size(132, 24);
             this.txtusername.TabIndex = 2;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             this.txtusername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusername_KeyPress);
@@ -74,9 +77,10 @@
             // 
             this.lblusername.AutoSize = true;
             this.lblusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblusername.Location = new System.Drawing.Point(204, 150);
+            this.lblusername.Location = new System.Drawing.Point(272, 185);
+            this.lblusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(110, 25);
+            this.lblusername.Size = new System.Drawing.Size(139, 31);
             this.lblusername.TabIndex = 4;
             this.lblusername.Text = "Username";
             // 
@@ -84,26 +88,29 @@
             // 
             this.lblpassword.AutoSize = true;
             this.lblpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpassword.Location = new System.Drawing.Point(204, 183);
+            this.lblpassword.Location = new System.Drawing.Point(272, 225);
+            this.lblpassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(106, 25);
+            this.lblpassword.Size = new System.Drawing.Size(134, 31);
             this.lblpassword.TabIndex = 5;
             this.lblpassword.Text = "Password";
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(320, 188);
+            this.txtpassword.Location = new System.Drawing.Point(427, 231);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(100, 20);
+            this.txtpassword.Size = new System.Drawing.Size(132, 22);
             this.txtpassword.TabIndex = 6;
             this.txtpassword.UseSystemPasswordChar = true;
             // 
             // chkGoster
             // 
             this.chkGoster.AutoSize = true;
-            this.chkGoster.Location = new System.Drawing.Point(438, 188);
+            this.chkGoster.Location = new System.Drawing.Point(584, 231);
+            this.chkGoster.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkGoster.Name = "chkGoster";
-            this.chkGoster.Size = new System.Drawing.Size(86, 17);
+            this.chkGoster.Size = new System.Drawing.Size(113, 21);
             this.chkGoster.TabIndex = 7;
             this.chkGoster.Text = "Şifreyi göster";
             this.chkGoster.UseVisualStyleBackColor = true;
@@ -111,10 +118,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(334, 267);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(445, 329);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 8;
             this.button2.Text = "Register";
             this.button2.UseVisualStyleBackColor = true;
@@ -123,17 +130,18 @@
             // lbluyarı
             // 
             this.lbluyarı.AutoSize = true;
-            this.lbluyarı.Location = new System.Drawing.Point(320, 210);
+            this.lbluyarı.Location = new System.Drawing.Point(427, 258);
+            this.lbluyarı.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbluyarı.Name = "lbluyarı";
-            this.lbluyarı.Size = new System.Drawing.Size(0, 13);
+            this.lbluyarı.Size = new System.Drawing.Size(0, 17);
             this.lbluyarı.TabIndex = 9;
             // 
             // Form1
             // 
             this.AcceptButton = this.button1;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.lbluyarı);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.chkGoster);
@@ -144,8 +152,9 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
-            this.Text = "Giriş Ekranı";
+            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,13 +165,13 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.Label lblusername;
         private System.Windows.Forms.Label lblpassword;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.CheckBox chkGoster;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lbluyarı;
+        public System.Windows.Forms.TextBox txtusername;
     }
 }
 
