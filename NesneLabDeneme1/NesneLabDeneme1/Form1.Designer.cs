@@ -112,7 +112,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(334, 267);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
@@ -156,13 +156,13 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.Label lblusername;
         private System.Windows.Forms.Label lblpassword;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.CheckBox chkGoster;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lbluyarı;
+        public System.Windows.Forms.TextBox txtusername;
     }
 }
 
