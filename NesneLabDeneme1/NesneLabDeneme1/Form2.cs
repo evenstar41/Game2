@@ -19,57 +19,76 @@ namespace NesneLabDeneme1
         {
             InitializeComponent();
         }
+        public static int sayı;
+        public static int satir=9;
+        public static int sutun=9;
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FileStream fw;
-            StreamWriter sw;
-            fw = new FileStream("nesnelabbb.txt", FileMode.OpenOrCreate, FileAccess.Write);
-
-            sw = new StreamWriter(fw);
-
-            sw.WriteLine(comboBox1.Text);
-
-
-            if (checkBox1.Checked)
+            if (comboBox1.Text == "easy")
             {
-                sw.WriteLine(checkBox1.Text);
-
+                satir = 15;
+                sutun = 15;
             }
-            if (checkBox2.Checked)
+            if (comboBox1.Text == "normal")
             {
-                sw.WriteLine(checkBox2.Text);
-
+                satir = 9;
+                sutun = 9;
             }
-            if (checkBox3.Checked)
+            if (comboBox1.Text == "hard")
             {
-                sw.WriteLine(checkBox3.Text);
-
-            }
-            if (chkboxRed.Checked)
-            {
-                sw.WriteLine(chkboxRed.Text);
-
-            }
-            if (chkboxYellow.Checked)
-            {
-                sw.WriteLine(chkboxYellow.Text);
-
-            }
-            if (chkboxGreen.Checked)
-            {
-                sw.WriteLine(chkboxGreen.Text);
-
+                satir = 5;
+                sutun = 5;
             }
 
-
-            sw.Close();
-            fw.Close();
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load("kayıtlar.xml");
+            foreach(XmlNode node in xmldoc.DocumentElement)
+            {
+                if (node["username"].InnerText == label4.Text)
+                {
+                    node["difficulties"].InnerText = comboBox1.Text;
+                    node["shape"].InnerText = label5.Text;
+                    node["color"].InnerText = label5.Text;
+                    if (checkBox1.Checked)
+                    {
+                        node["shape"].InnerText += "triangle,";
+                    }
+                    if (checkBox2.Checked)
+                    {
+                        node["shape"].InnerText += "square,";
+                    }
+                    if (checkBox3.Checked)
+                    {
+                        node["shape"].InnerText += "circle";
+                    }
+                    if (chkboxRed.Checked)
+                    {
+                        node["color"].InnerText += "red,";
+                    }
+                    if (chkboxGreen.Checked)
+                    {
+                        node["color"].InnerText += "green,";
+                    }
+                    if (chkboxYellow.Checked)
+                    {
+                        node["color"].InnerText += "yellow";
+                    }
+                }
+            }
+            xmldoc.Save("kayıtlar.xml");
+            
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
             //admin sayfası girişi izni
+
+            label4.Text = Form1.giden;
+            label4.Visible = false;
+
+
             FileStream fs = new FileStream("username.txt", FileMode.Open, FileAccess.Read);
             StreamReader sw = new StreamReader(fs);
             string yazi = sw.ReadLine();
@@ -79,51 +98,62 @@ namespace NesneLabDeneme1
             try
             {
 
+                
+
+
 
                 if (yazi == "admin")
                 {
                     admingirisi.Visible = true;
                 }
+                XmlDocument xmldoc = new XmlDocument();
+                xmldoc.Load("kayıtlar.xml");
 
-                StreamReader sr = File.OpenText("nesnelabbb.txt");
-                string metin;
-
-
-                while ((metin = sr.ReadLine()) != null)
+                foreach(XmlNode node in xmldoc.DocumentElement)
                 {
-                    comboBox1.Text = metin;
-                    break;
-                }
-                string metin2;
+                    if (node["username"].InnerText == label4.Text)
+                    {
+                        comboBox1.Text = node["difficulties"].InnerText;
 
-                while ((metin2 = sr.ReadLine()) != null)
-                {
-                    if (metin2 == "Circle")
-                    {
-                        checkBox1.Checked = true;
+                        string[] shape = node["shape"].InnerText.Split(',');
+                        foreach (string index in shape)
+                        {
+                            if (index == "triangle")
+                            {
+                                checkBox1.Checked = true;
+                            }
+                            if (index == "square")
+                            {
+                                checkBox2.Checked = true;
+                            }
+                            if (index == "circle")
+                            {
+                                checkBox3.Checked = true;
+                            }
+
+                        }
+                        string[] color = node["color"].InnerText.Split(',');
+                        foreach(String renk in color)
+                        {
+                            if (renk == "red")
+                            {
+                                chkboxRed.Checked = true;
+                            }
+                            if (renk == "yellow")
+                            {
+                                chkboxYellow.Checked = true;
+                            }
+                            if (renk == "green")
+                            {
+                                chkboxGreen.Checked = true;
+                            }
+                        }
                     }
-                    if (metin2 == "Triangle")
-                    {
-                        checkBox3.Checked = true;
-                    }
-                    if (metin2 == "Square")
-                    {
-                        checkBox2.Checked = true;
-                    }
-                    if (metin2 == "Red")
-                    {
-                        chkboxRed.Checked = true;
-                    }
-                    if (metin2 == "Yellow")
-                    {
-                        chkboxYellow.Checked = true;
-                    }
-                    if (metin2 == "Green")
-                    {
-                        chkboxGreen.Checked = true;
-                    }
+                    
+
+                    
                 }
-                sr.Close();
+               
             }
             catch (Exception)
             {
@@ -157,6 +187,99 @@ namespace NesneLabDeneme1
         {
             new Form5().Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //satir = int.Parse(txtsatir.Text);
+            //sutun = int.Parse(txtsutun.Text);
+            if (satir > 20 || sutun>20)
+            {
+                MessageBox.Show("Satır veya sütun sayısı 20'den fazla olamaz!");
+                //txtsatir.Text = "0";
+                //txtsutun.Text = "0";
+            }
+            if (satir<6 || sutun<6)
+            {
+                MessageBox.Show("Satır veya sütun sayısı 6'dan az olamaz!");
+                //txtsatir.Text = "0";
+                //txtsutun.Text = ;
+            }
+            else
+            {
+                if (chkCustom.Checked==true)
+                {
+                    satir = int.Parse(txtsatir.Text);
+                    sutun = int.Parse(txtsutun.Text);
+                    Form6 f6 = new Form6();
+                    f6.ShowDialog();
+                    this.Close();
+                }
+                if (chkCustom.Checked==false)
+                {
+                    if (comboBox1.Text == "easy")
+                    {
+                        satir = 15;
+                        sutun = 15;
+                    }
+                    if (comboBox1.Text == "normal")
+                    {
+                        satir = 9;
+                        sutun = 9;
+                    }
+                    if (comboBox1.Text == "hard")
+                    {
+                        satir = 5;
+                        sutun = 5;
+                    }
+                    Form6 f6 = new Form6();
+                    f6.ShowDialog();
+                    this.Close();
+                }
+                
+            }
+            
+            
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Form8 f8 = new Form8();
+            f8.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form7 f3 = new Form7();
+
+            f3.ShowDialog();
+        }
+
+        private void chkCustom_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkCustom.Checked == true)
+            {
+                panel1.Enabled = true;
+                comboBox1.Enabled = false;
+                //satir = int.Parse(txtsatir.Text);
+                //sutun = int.Parse(txtsutun.Text);
+            }
+            if (chkCustom.Checked == false)
+            {
+                panel1.Enabled = false;
+                comboBox1.Enabled = true;
+            }
+        }
+
+        private void txtsatir_TextChanged(object sender, EventArgs e)
+        {
+            
+            //satir = int.Parse(txtsatir.Text);
+        }
+
+        private void txtsutun_TextChanged(object sender, EventArgs e)
+        {
+            //sutun = int.Parse(txtsutun.Text);
         }
     }
 }

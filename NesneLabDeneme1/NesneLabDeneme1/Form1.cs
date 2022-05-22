@@ -16,6 +16,7 @@ namespace NesneLabDeneme1
 {
     public partial class Form1 : Form
     {
+        public static string giden;
         public string FromXML_user = "";
         public string FromXML_password = "";
 
@@ -34,8 +35,10 @@ namespace NesneLabDeneme1
         {
             string user = txtusername.Text;
             string pws = txtpassword.Text;
-
+            giden = user;
             
+
+
             XmlDocument xmldoc = new XmlDocument();
                 xmldoc.Load("kayıtlar.xml");
 
@@ -69,7 +72,7 @@ namespace NesneLabDeneme1
                         txtpassword.Clear();
                     }
                 }
-            }   
+            }
                 
 
 
@@ -115,14 +118,22 @@ namespace NesneLabDeneme1
                 XElement element1 = new XElement("uye");
 
                 XElement name_surname1 = new XElement("name-surname", "admin");
+                string adm_pass="admin";
+                SHA256Managed sha256 = new SHA256Managed();
+                byte[] bitDizisi = System.Text.Encoding.UTF8.GetBytes(adm_pass);
+
+                string sifreliVeri1 = Convert.ToBase64String(sha256.ComputeHash(bitDizisi));
                 XElement username1 = new XElement("username", "admin");
-                XElement password1 = new XElement("password", "admin");
+                XElement password1 = new XElement("password", sifreliVeri1);
                 XElement phone1 = new XElement("phone", "admin");
                 XElement city1 = new XElement("city", "admin");
                 XElement adress1 = new XElement("adress", "admin");
                 XElement e_mail1 = new XElement("e-mail", "admin");
                 XElement country1 = new XElement("country", "admin");
-                element1.Add(name_surname1, username1, password1, phone1, city1, adress1, e_mail1, country1);
+                XElement difficulties = new XElement("difficulties", " ");
+                XElement shape = new XElement("shape", " ");
+                XElement color = new XElement("color", " ");
+                element1.Add(name_surname1, username1, password1, phone1, city1, adress1, e_mail1, country1, difficulties, shape, color);
                 rootelement1.Add(element1);
 
                 xdosya1.Save("kayıtlar.xml");
@@ -170,6 +181,11 @@ namespace NesneLabDeneme1
             Form3 f3 = new Form3();
             
             f3.Show();
+        }
+
+        private void btnCredits_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
