@@ -312,6 +312,7 @@
             this.txtsutun.Size = new System.Drawing.Size(25, 20);
             this.txtsutun.TabIndex = 25;
             this.txtsutun.TextChanged += new System.EventHandler(this.txtsutun_TextChanged);
+            this.txtsutun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsutun_KeyPress);
             // 
             // txtsatir
             // 
@@ -320,6 +321,7 @@
             this.txtsatir.Size = new System.Drawing.Size(25, 20);
             this.txtsatir.TabIndex = 24;
             this.txtsatir.TextChanged += new System.EventHandler(this.txtsatir_TextChanged);
+            this.txtsatir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsatir_KeyPress);
             // 
             // chkCustom
             // 

@@ -561,5 +561,10 @@ namespace NesneLabDeneme1
         {
 
         }
+
+        private void btncıkıs_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

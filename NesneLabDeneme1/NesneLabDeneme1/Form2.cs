@@ -20,8 +20,8 @@ namespace NesneLabDeneme1
             InitializeComponent();
         }
         public static int sayı;
-        public static int satir=9;
-        public static int sutun=9;
+        public static int satir;
+        public static int sutun;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -191,53 +191,67 @@ namespace NesneLabDeneme1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //satir = int.Parse(txtsatir.Text);
-            //sutun = int.Parse(txtsutun.Text);
-            if (satir > 20 || sutun>20)
-            {
-                MessageBox.Show("Satır veya sütun sayısı 20'den fazla olamaz!");
-                //txtsatir.Text = "0";
-                //txtsutun.Text = "0";
-            }
-            if (satir<6 || sutun<6)
-            {
-                MessageBox.Show("Satır veya sütun sayısı 6'dan az olamaz!");
-                //txtsatir.Text = "0";
-                //txtsutun.Text = ;
-            }
-            else
-            {
-                if (chkCustom.Checked==true)
+           
+            if (chkCustom.Checked == true)
+            {                
+                if (txtsatir.Text=="")
                 {
-                    satir = int.Parse(txtsatir.Text);
+                    MessageBox.Show("Lütfen satır ve sütunu yazınız!");
+                }
+                else satir = int.Parse(txtsatir.Text);
+
+                if (txtsutun.Text=="")
+                {
+                    MessageBox.Show("Lütfen satır ve sütunu yazınız!");
+                }
+                else
+                {
                     sutun = int.Parse(txtsutun.Text);
-                    Form6 f6 = new Form6();
-                    f6.ShowDialog();
-                    this.Close();
                 }
-                if (chkCustom.Checked==false)
+
+                if (satir < 20 && sutun < 20)
                 {
-                    if (comboBox1.Text == "easy")
+                    if (satir>=6 && sutun>=6)
                     {
-                        satir = 15;
-                        sutun = 15;
+                        Form6 f6 = new Form6();
+                        f6.ShowDialog();
+                        this.Close();
                     }
-                    if (comboBox1.Text == "normal")
-                    {
-                        satir = 9;
-                        sutun = 9;
-                    }
-                    if (comboBox1.Text == "hard")
-                    {
-                        satir = 5;
-                        sutun = 5;
-                    }
-                    Form6 f6 = new Form6();
-                    f6.ShowDialog();
-                    this.Close();
+                    else MessageBox.Show("Satır veya sütun sayısı 6'dan az olamaz!");
+
                 }
-                
+                else
+                {
+                    MessageBox.Show("Satır veya sütun sayısı 20'den fazla olamaz!");
+
+                }
+                //if (satir < 6 || sutun < 6)
+                //{
+                //    MessageBox.Show("Satır veya sütun sayısı 6'dan az olamaz!");
+                //}
             }
+            if (chkCustom.Checked == false)
+            {
+                if (comboBox1.Text == "easy")
+                {
+                    satir = 15;
+                    sutun = 15;
+                }
+                if (comboBox1.Text == "normal")
+                {
+                    satir = 9;
+                    sutun = 9;
+                }
+                if (comboBox1.Text == "hard")
+                {
+                    satir = 5;
+                    sutun = 5;
+                }
+                Form6 f6 = new Form6();
+                f6.ShowDialog();
+                this.Close();
+            }
+            
             
             
         }
@@ -280,6 +294,24 @@ namespace NesneLabDeneme1
         private void txtsutun_TextChanged(object sender, EventArgs e)
         {
             //sutun = int.Parse(txtsutun.Text);
+        }
+
+        private void txtsatir_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtsutun_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

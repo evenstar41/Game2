@@ -45,3 +45,20 @@ C:\Users\ferdi\Desktop\Game2-Berke_tusharaket\NesneLabDeneme1 - Kopya\NesneLabDe
 C:\Users\ferdi\Desktop\Game2-Berke_tusharaket\NesneLabDeneme1 - Kopya\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.pdb
 C:\Users\ferdi\Desktop\Game2-Berke_tusharaket\NesneLabDeneme1 - Kopya\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form7.resources
 C:\Users\ferdi\Desktop\Game2-Berke_tusharaket\NesneLabDeneme1 - Kopya\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form8.resources
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\bin\Debug\NesneLabDeneme1.exe.config
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\bin\Debug\NesneLabDeneme1.exe
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\bin\Debug\NesneLabDeneme1.pdb
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.csprojAssemblyReference.cache
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form1.resources
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form2.resources
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form3.resources
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form4.resources
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form5.resources
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form6.resources
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form7.resources
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form8.resources
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Properties.Resources.resources
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.csproj.GenerateResource.cache
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.csproj.CoreCompileInputs.cache
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.exe
+C:\Users\ferdi\Desktop\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.pdb

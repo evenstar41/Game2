@@ -30,6 +30,7 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btncıkıs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -52,9 +53,20 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "PUANINIZ:";
             // 
+            // btncıkıs
+            // 
+            this.btncıkıs.Location = new System.Drawing.Point(221, 9);
+            this.btncıkıs.Name = "btncıkıs";
+            this.btncıkıs.Size = new System.Drawing.Size(75, 23);
+            this.btncıkıs.TabIndex = 2;
+            this.btncıkıs.Text = "ÇIKIŞ";
+            this.btncıkıs.UseVisualStyleBackColor = true;
+            this.btncıkıs.Click += new System.EventHandler(this.btncıkıs_Click);
+            // 
             // Form6
             // 
             this.ClientSize = new System.Drawing.Size(734, 545);
+            this.Controls.Add(this.btncıkıs);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "Form6";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btncıkıs;
     }
 }
