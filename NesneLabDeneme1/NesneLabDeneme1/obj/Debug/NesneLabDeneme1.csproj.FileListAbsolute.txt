@@ -79,3 +79,4 @@ C:\Users\kacar\OneDrive\Masaüstü\Yeni klasör (8)\Game2\NesneLabDeneme1\NesneL
 C:\Users\kacar\OneDrive\Masaüstü\Yeni klasör (8)\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.csproj.CoreCompileInputs.cache
 C:\Users\kacar\OneDrive\Masaüstü\Yeni klasör (8)\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.exe
 C:\Users\kacar\OneDrive\Masaüstü\Yeni klasör (8)\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.pdb
+C:\Users\kacar\OneDrive\Masaüstü\Yeni klasör (8)\Game2\NesneLabDeneme1\NesneLabDeneme1\obj\Debug\NesneLabDeneme1.Form9.resources
