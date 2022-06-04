@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Media;
+using System.Data.SqlClient;
+using System.Data;//bağlantının açık olup olmadığını kontrol eder
 
 namespace NesneLabDeneme1
 {
@@ -564,7 +566,50 @@ namespace NesneLabDeneme1
 
         private void btncıkıs_Click(object sender, EventArgs e)
         {
+
+
+            SqlConnection connection1 = new SqlConnection("Data Source=myFirtsDB.mssql.somee.com;Initial Catalog=myFirtsDB;Persist Security Info=True;User ID=kacarberke_SQLLogin_1;Password=vgb5g6e8cb");
+            connection1.Open();
+            SqlCommand idc = new SqlCommand("Select * from puanTablosu", connection1);
+            idc.ExecuteNonQuery();
+            SqlDataReader oku;
+            int flag = 0;
+            oku = idc.ExecuteReader();
+             while(oku.Read())
+            {
+                if (oku["username"].ToString() == Form1.giden)
+                {
+                    flag = 1;
+                }
+                else
+                {
+                    flag = 0;
+                }
+            }
+            oku.Close();
+
+            if (flag == 0)
+            {
+                SqlCommand ekle = new SqlCommand("insert into puanTablosu(username,puan) values(@puser,@ppuan) ",connection1);
+                ekle.Parameters.AddWithValue("@puser", Form1.giden);
+                ekle.Parameters.AddWithValue("@ppuan", puan);
+                ekle.ExecuteNonQuery();
+            }
+            if (flag == 1)
+            {
+                SqlCommand komut = new SqlCommand("update puanTablosu set username=@puser ,puan=@ppuan",connection1);
+                komut.Parameters.AddWithValue("@puser", Form1.giden);
+                komut.Parameters.AddWithValue("@ppuan", puan);
+                komut.ExecuteNonQuery();
+            }
+            connection1.Close();
             Application.Exit();
+
+
+            
+
         }
+        
+        
     }
 }
