@@ -86,6 +86,72 @@ namespace NesneLabDeneme1
             dy = 1;
         }
 
+        //customda seçilen şekiller
+        public static int uk = 0;
+        public static int uy = 0;
+        public static int us = 0;
+
+        public static int kk = 0;
+        public static int ks = 0;
+        public static int ky = 0;
+
+        public static int dk = 0;
+        public static int ds = 0;
+        public static int dy = 0;
+
+        private void SekilSec()
+        {
+            if (redTri.Checked == true)
+            {
+                uk = 1;
+            }
+            if (greenTri.Checked == true)
+            {
+                uy = 1;
+            }
+            if (yellowtri.Checked == true)
+            {
+                us = 1;
+            }
+            if (redSqr.Checked == true)
+            {
+                kk = 1;
+            }
+            if (yellowSqr.Checked == true)
+            {
+                ks = 1;
+            }
+            if (greenSqr.Checked == true)
+            {
+                ky = 1;
+            }
+            if (redCrc.Checked == true)
+            {
+                dk = 1;
+            }
+            if (yellowCrc.Checked == true)
+            {
+                ds = 1;
+            }
+            if (greenCrc.Checked == true)
+            {
+                dy = 1;
+            }
+
+        }
+        private void SekilSıfırla()
+        {
+            uk = 1;
+            uy = 1;
+            us = 1;
+            kk = 1;
+            ks = 1;
+            ky = 1;
+            dk = 1;
+            ds = 1;
+            dy = 1;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             FileStream fw;
@@ -171,6 +237,9 @@ namespace NesneLabDeneme1
             xmldoc.Save("kayıtlar.xml");
 
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
 
@@ -187,7 +256,11 @@ namespace NesneLabDeneme1
             {
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+
+>>>>>>> Stashed changes
 
 
 
@@ -198,6 +271,7 @@ namespace NesneLabDeneme1
                     admingirisi.Visible = true;
                 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
                 StreamReader sr = File.OpenText("nesnelabbb.txt");
                 string metin;
@@ -239,6 +313,8 @@ namespace NesneLabDeneme1
                 }
                 sr.Close();
 =======
+=======
+>>>>>>> Stashed changes
                 foreach (XmlNode node in xmldoc.DocumentElement)
                 {
                     if (node["username"].InnerText == label4.Text)
@@ -284,6 +360,9 @@ namespace NesneLabDeneme1
 
                 }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             }
             catch (Exception)
@@ -321,6 +400,8 @@ namespace NesneLabDeneme1
         }
 <<<<<<< Updated upstream
 =======
+
+        
 
         
 
@@ -455,6 +536,9 @@ namespace NesneLabDeneme1
             else
                 panel2.Enabled = false;
         }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }

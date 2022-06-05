@@ -60,6 +60,9 @@
             this.chKsHAPES = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             this.SuspendLayout();
             // 
@@ -99,6 +102,7 @@
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             // label3
             // 
@@ -186,6 +190,44 @@
             // 
             this.button1.Location = new System.Drawing.Point(6, 412);
 >>>>>>> Stashed changes
+=======
+            // redTri
+            // 
+            this.redTri.AutoSize = true;
+            this.redTri.Location = new System.Drawing.Point(12, 20);
+            this.redTri.Margin = new System.Windows.Forms.Padding(2);
+            this.redTri.Name = "redTri";
+            this.redTri.Size = new System.Drawing.Size(64, 30);
+            this.redTri.TabIndex = 4;
+            this.redTri.Text = "Red \r\nTriangle";
+            this.redTri.UseVisualStyleBackColor = true;
+            // 
+            // redSqr
+            // 
+            this.redSqr.AutoSize = true;
+            this.redSqr.Location = new System.Drawing.Point(12, 60);
+            this.redSqr.Margin = new System.Windows.Forms.Padding(2);
+            this.redSqr.Name = "redSqr";
+            this.redSqr.Size = new System.Drawing.Size(60, 30);
+            this.redSqr.TabIndex = 5;
+            this.redSqr.Text = "Red\r\nSquare";
+            this.redSqr.UseVisualStyleBackColor = true;
+            // 
+            // redCrc
+            // 
+            this.redCrc.AutoSize = true;
+            this.redCrc.Location = new System.Drawing.Point(12, 102);
+            this.redCrc.Margin = new System.Windows.Forms.Padding(2);
+            this.redCrc.Name = "redCrc";
+            this.redCrc.Size = new System.Drawing.Size(52, 30);
+            this.redCrc.TabIndex = 6;
+            this.redCrc.Text = "Red\r\nCircle";
+            this.redCrc.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 412);
+>>>>>>> Stashed changes
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(59, 19);
@@ -197,7 +239,11 @@
             // button2
             // 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.button2.Location = new System.Drawing.Point(61, 222);
+=======
+            this.button2.Location = new System.Drawing.Point(66, 412);
+>>>>>>> Stashed changes
 =======
             this.button2.Location = new System.Drawing.Point(66, 412);
 >>>>>>> Stashed changes
@@ -209,6 +255,7 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             // chkboxGreen
             // 
@@ -257,6 +304,44 @@
             // admingirisi
             // 
             this.admingirisi.Location = new System.Drawing.Point(2, 246);
+=======
+            // greenCrc
+            // 
+            this.greenCrc.AutoSize = true;
+            this.greenCrc.Location = new System.Drawing.Point(88, 102);
+            this.greenCrc.Margin = new System.Windows.Forms.Padding(2);
+            this.greenCrc.Name = "greenCrc";
+            this.greenCrc.Size = new System.Drawing.Size(55, 30);
+            this.greenCrc.TabIndex = 12;
+            this.greenCrc.Text = "Green\r\nCircle";
+            this.greenCrc.UseVisualStyleBackColor = true;
+            // 
+            // greenSqr
+            // 
+            this.greenSqr.AutoSize = true;
+            this.greenSqr.Location = new System.Drawing.Point(88, 60);
+            this.greenSqr.Margin = new System.Windows.Forms.Padding(2);
+            this.greenSqr.Name = "greenSqr";
+            this.greenSqr.Size = new System.Drawing.Size(60, 30);
+            this.greenSqr.TabIndex = 11;
+            this.greenSqr.Text = "Green \r\nSquare\r\n";
+            this.greenSqr.UseVisualStyleBackColor = true;
+            // 
+            // greenTri
+            // 
+            this.greenTri.AutoSize = true;
+            this.greenTri.Location = new System.Drawing.Point(88, 20);
+            this.greenTri.Margin = new System.Windows.Forms.Padding(2);
+            this.greenTri.Name = "greenTri";
+            this.greenTri.Size = new System.Drawing.Size(64, 30);
+            this.greenTri.TabIndex = 10;
+            this.greenTri.Text = "Green\r\nTriangle";
+            this.greenTri.UseVisualStyleBackColor = true;
+            // 
+            // admingirisi
+            // 
+            this.admingirisi.Location = new System.Drawing.Point(7, 436);
+>>>>>>> Stashed changes
 =======
             // greenCrc
             // 
@@ -479,14 +564,20 @@
             this.chKsHAPES.UseVisualStyleBackColor = true;
             this.chKsHAPES.CheckedChanged += new System.EventHandler(this.chKsHAPES_CheckedChanged);
             // 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(600, 366);
 =======
+=======
+>>>>>>> Stashed changes
             this.ClientSize = new System.Drawing.Size(600, 469);
             this.Controls.Add(this.chkCustom);
             this.Controls.Add(this.panel1);
@@ -520,6 +611,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -558,6 +652,9 @@
         private System.Windows.Forms.CheckBox yellowCrc;
         private System.Windows.Forms.CheckBox chKsHAPES;
         private System.Windows.Forms.Panel panel2;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }
