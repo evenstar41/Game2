@@ -22,6 +22,7 @@ namespace NesneLabDeneme1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             XDocument xdosya = XDocument.Load("kayıtlar.xml");
             XElement rootelement = xdosya.Root;
 
@@ -42,9 +43,12 @@ namespace NesneLabDeneme1
             XElement adress = new XElement("adress", textBox5.Text);
             XElement e_mail = new XElement("e-mail", textBox6.Text);
             XElement country = new XElement("country", textBox7.Text);
-            
+            XElement difficulties = new XElement("difficulties", " ");
+            XElement shape = new XElement("shape", " ");
+            XElement color = new XElement("color", " ");
 
-            element.Add(name_surname, username, password, phone, city, adress, e_mail, country);
+
+            element.Add(name_surname, username, password, phone, city, adress, e_mail, country,difficulties,shape,color);
             rootelement.Add(element);
 
             xdosya.Save("kayıtlar.xml");

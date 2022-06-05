@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uyeler>
+  <uye>
+    <name-surname>admin</name-surname>
+    <username>admin</username>
+    <password>jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=</password>
+    <phone>admin</phone>
+    <city>admin</city>
+    <adress>admin</adress>
+    <e-mail>admin</e-mail>
+    <country>admin</country>
+    <difficulties></difficulties>
+    <shape></shape>
+    <color></color>
+  </uye>
+  <uye>
+    <name-surname>Berke</name-surname>
+    <username>berke</username>
+    <password>RUB1qHRXZ3n2EnlI/QVPdJsF4IUZA5FRIceZJSs9TEw=</password>
+    <phone>5422296473</phone>
+    <city>Eskişehir</city>
+    <adress>büyükdere mahallesi papatya sokak no:.3</adress>
+    <e-mail>kacarberke@iicloud.com</e-mail>
+    <country>Turkey</country>
+    <difficulties>normal</difficulties>
+    <shape>circle</shape>
+    <color>yellow</color>
+  </uye>
+  <uye>
+    <name-surname>user</name-surname>
+    <username>user</username>
+    <password>BPiZbadjt6lpsQKO4wB1aerzpjVIbdqyEdUSyFud+Ps=</password>
+    <phone></phone>
+    <city></city>
+    <adress></adress>
+    <e-mail></e-mail>
+    <country></country>
+    <difficulties> </difficulties>
+    <shape> </shape>
+    <color> </color>
+  </uye>
+</uyeler>
